@@ -44,51 +44,6 @@ Story-Maker/
 ├── server/
 ├── src/
 ```
-
-## ⚙️ Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/GauravSoni2008/Story-Maker.git
-```
-
-Move into the project folder:
-
-```bash
-cd Story-Maker
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Create a `.env` file:
-
-```env
-API_KEY=YOUR_API_KEY
-```
-
-Start the development server:
-
-```bash
-npm start
-```
-
-or
-
-```bash
-npm run dev
-```
-
-Open your browser and visit:
-
-```
-http://localhost:3000
-```
-
 ---
 
 ## 💡 Usage
@@ -110,39 +65,6 @@ http://localhost:3000
 * Multiple AI models
 * Voice narration
 * Theme selection
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome!
-
-1. Fork the repository.
-2. Create a new branch.
-
-```bash
-git checkout -b feature-name
-```
-
-3. Commit your changes.
-
-```bash
-git commit -m "Add new feature"
-```
-
-4. Push to your branch.
-
-```bash
-git push origin feature-name
-```
-
-5. Open a Pull Request.
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
 
 ---
 
