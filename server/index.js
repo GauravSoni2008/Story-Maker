@@ -12,14 +12,6 @@ You are an assistant that receives a list of keywords from a user and creates an
 // Load API key from environment — never hard-code it here!
 const hf = new HfInference(process.env.HF_ACCESS_TOKEN)
 
-// app.use(
-//     cors({
-//         origin: [
-//             "http://localhost:5173",
-//             "https://the-joker-ai.vercel.app"
-//         ],
-//     })
-// )
 
 app.use(cors())
 
@@ -39,7 +31,7 @@ app.post("/api/joke", async (req, res) => {
             model: "Qwen/Qwen2.5-72B-Instruct",
             messages: [
                 { role: "system", content: SYSTEM_PROMPT },
-                { role: "user", content: `I have ${ingredientsString}. Please give me a joke!` },
+                { role: "user", content: `I have ${ingredientsString}. Please give me a story!` },
             ],
             max_tokens: 1024,
         })
@@ -48,17 +40,8 @@ app.post("/api/joke", async (req, res) => {
         return res.json({ joke })
     } catch (err) {
         console.error("HuggingFace API error:", err.message)
-        return res.status(500).json({ error: "Failed to generate joke. Please try again." })
+        return res.status(500).json({ error: "Failed to generate story. Please try again." })
     }
 })
-
-// const server = app.listen(PORT, () => {
-//     console.log(`✅  Joke backend running at http://localhost:${PORT}`)
-// })
-
-// // Gracefully close the server when node --watch restarts (SIGTERM)
-// process.on('SIGTERM', () => {
-//     server.close(() => process.exit(0))
-// })
 
 export default app
